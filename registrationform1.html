@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div align="center">
+        <h1>Registration form</h1>
+       <table border="2px"><br><br><br>
+           <tr>
+            <td id="p1"> </td>
+            <td id="p2"></td>
+           </tr>
+           <tr>
+            <td id="p3"> </td>
+            <td id="p4"></td>
+
+           </tr>
+           <tr>
+            <td>Gender </td>
+            <td id="p5"> </td>
+
+
+           </tr>
+         First Name:  <input type="textbox" id="t1" value=" " name="fname">
+         Last Name: <input type="textbox" id="t2" value=" " name="Lname"><br><br>
+         Mobile Number:  <input type="textbox" id="t3" value=" " name="mnumber">
+         Email id: <input type="textbox" value=" " id="t4" name="Eid"><br><br>
+          Male<input type="radio"  value="Male" name="gender">
+          Female <input type="radio"  value="Female" name="gender">
+           Others<input type="radio"  value="Others" name="gender">
+         <input type="button" value="Submit" onclick="get()">
+         <input type="button" value="pro" onclick="pro()">
+         <script>
+            function get(){
+                var n1=document.getElementById("t1").value;
+                var n2=document.getElementById("t2").value;
+                var n3=document.getElementById("t3").value;
+                var n4=document.getElementById("t4").value;
+               
+                document.getElementById("p1").innerHTML=n1
+                document.getElementById("p2").innerHTML=n2
+                document.getElementById("p3").innerHTML=n3
+                document.getElementById("p4").innerHTML=n4;
+
+                var a3=document.getElementsByName("gender")
+
+                for(i=0;i<a3.length;i++){
+                 if(a3[i].checked){
+                 var gen=a3[i].value
+  
+                    }
+
+                    }
+
+                    document.getElementById("p5").innerHTML=gen;
+
+
+
+
+
+            }
+
+            function pro(){
+                var x=prompt("Enter your name ");
+                var y=prompt("Enter your surname ");
+                alert("your full name is: "+(x+y));
+
+            }
+            
+         </script>
+
+
+
+       </table>
+
+</div>
+    
+</body>
+</html>
